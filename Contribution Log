@@ -1,0 +1,259 @@
+Contributing to BFS and DFS Grid Pathfinder
+
+Thank you for your interest in contributing to the BFS and DFS Grid Pathfinder project.
+
+This document explains how contributors can work with the project while keeping the code organized and easy to understand.
+
+---
+
+1. Getting Started
+
+Clone the repository:
+
+git clone https://github.com/juishinde136-arch/IAI_SLE2_BFS_DFS.git
+
+Move into the project directory:
+
+cd IAI_SLE2_BFS_DFS
+
+Make sure Python is installed:
+
+python --version
+
+---
+
+2. Project Structure
+
+The main implementation files are:
+
+bfs.py
+dfs.py
+profile_bfs.py
+profile_dfs.py
+bfs_for_pyspy.py
+dfs_for_pyspy.py
+
+Profiling outputs include:
+
+bfs_profile.svg
+dfs_profile.svg
+
+---
+
+3. Making Changes
+
+Before making changes:
+
+1. Understand the existing BFS/DFS implementation.
+2. Keep BFS and DFS logic separate.
+3. Avoid unnecessary changes to working code.
+4. Test the modified code before committing.
+5. Update documentation when necessary.
+
+---
+
+4. Working With BFS
+
+Changes related to Breadth-First Search should primarily be made in:
+
+bfs.py
+
+BFS should maintain its queue-based traversal approach.
+
+When modifying BFS, verify:
+
+- Graph/grid input works correctly.
+- Start and goal cells are handled.
+- Visited cells are tracked.
+- Blocked cells are handled.
+- The search terminates correctly.
+- The resulting path is correct.
+
+---
+
+5. Working With DFS
+
+Changes related to Depth-First Search should primarily be made in:
+
+dfs.py
+
+DFS should maintain its depth-first traversal approach using stack/recursive behavior.
+
+Check:
+
+- Start and goal cells.
+- Visited cells.
+- Blocked cells.
+- Traversal order.
+- Search termination.
+- Path reconstruction.
+
+---
+
+6. Testing
+
+Run BFS:
+
+python bfs.py
+
+Run DFS:
+
+python dfs.py
+
+Run the profiling scripts:
+
+python profile_bfs.py
+python profile_dfs.py
+
+Check that the programs execute without errors and produce the expected results.
+
+---
+
+7. Profiling Contributions
+
+If changes affect algorithm performance, profiling should be performed again.
+
+BFS profiling:
+
+python profile_bfs.py
+
+DFS profiling:
+
+python profile_dfs.py
+
+For Py-Spy profiling, use the existing profiling scripts:
+
+bfs_for_pyspy.py
+dfs_for_pyspy.py
+
+Do not replace existing profiling results without checking that the new results are valid.
+
+---
+
+8. Commit Messages
+
+Use clear commit messages.
+
+Good examples:
+
+Add BFS path reconstruction
+
+Improve DFS profiling
+
+Update C4 architecture documentation
+
+Add project README
+
+Avoid unclear messages such as:
+
+changes
+
+or
+
+update
+
+---
+
+9. Pull Requests
+
+Before creating a pull request:
+
+1. Test the modified code.
+2. Check the Git status.
+3. Review the changes.
+4. Make sure unnecessary files are not included.
+5. Explain what was changed.
+
+Example:
+
+git status
+
+git add .
+
+git commit -m "Update BFS profiling"
+
+git push
+
+---
+
+10. Documentation
+
+Documentation should be updated when a contribution changes:
+
+- BFS/DFS behavior
+- Project architecture
+- Profiling procedure
+- File structure
+- Usage instructions
+
+Keep the README clear and beginner-friendly.
+
+---
+
+11. Code Quality
+
+Contributors should:
+
+- Use meaningful names.
+- Keep functions focused.
+- Avoid unnecessary complexity.
+- Add comments where they improve understanding.
+- Preserve the existing project structure.
+- Test changes before committing.
+
+---
+
+12. Reporting Issues
+
+When reporting an issue, include:
+
+- Description of the problem.
+- File where the problem occurs.
+- Steps to reproduce it.
+- Expected behavior.
+- Actual behavior.
+- Relevant error message.
+
+Example:
+
+File: bfs.py
+
+Problem:
+BFS does not return the expected route.
+
+Expected:
+The program should return a route from START to GOAL.
+
+Actual:
+The program reports that no path exists.
+
+---
+
+13. Contribution Scope
+
+Contributions may include:
+
+- Improving BFS implementation.
+- Improving DFS implementation.
+- Improving path reconstruction.
+- Improving performance profiling.
+- Improving documentation.
+- Improving C4 architecture diagrams.
+- Fixing bugs.
+- Adding appropriate tests.
+
+---
+
+14. Final Checklist
+
+Before submitting a contribution:
+
+[ ] Code runs successfully
+[ ] BFS/DFS behavior is correct
+[ ] No unnecessary files are added
+[ ] Profiling still works
+[ ] README is updated if required
+[ ] Commit message is clear
+[ ] Changes have been reviewed
+
+Thank you for contributing to the BFS and DFS Grid Pathfinder project.
